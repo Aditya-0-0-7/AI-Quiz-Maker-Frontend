@@ -1,0 +1,47 @@
+main
+{
+    width: 100vw;
+    min-height: 100vh;
+    height: fit-content;
+    background-color: #C4B29E;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+  /* Track of the scrollbar */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+  /* Handle of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px; 
+}
+.press-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+  background-color: #2980b9;
+}
+.press-button-general:active
+{
+  transform: scale(0.95);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+.commonBtn
+{
+    margin-left: 2%;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding:2%;
+    border-radius: 1vmin;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}

@@ -1,0 +1,99 @@
+.viewFromFileBtn
+{
+    height: 7vh;
+    width: 50%;
+    margin-top: 5%;
+}
+.viewMsg
+{
+    font-weight: 500;
+    margin-top: 4%;
+    font-size: 3vmin;
+    text-align: center;
+}
+.filesDisplayContainer
+{
+    width: 100%;
+    height: 12vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+}
+.viewFileContainer
+{
+    margin-top: 4%;
+    width: 60%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    font-size: 3vmin;
+}
+.removeFileBtn
+{
+    background-color: rgba(255,255,255,0);
+    width: 10%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmin;
+    cursor: pointer;
+}
+.removeFileBtn:hover
+{
+    color: red;
+}
+.viewFileImg
+{
+    width: 12%;
+}
+.viewFileName
+{
+    padding-left: 2%;
+    width:78%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+.viewFileNameText
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: fit-content;
+    height: fit-content;
+}
+@media (max-width: 1200px)
+{
+    .viewMsg
+    {
+        font-size: 3.3vmin;
+    }
+}
+@media (max-width: 600px)
+{
+    .viewMsg
+    {
+        font-size: 4.5vmin;
+    }
+    .viewFileContainer
+    {
+        font-size: 4vmin;
+    }
+    .removeFileBtn
+    {
+        font-size: 4vmin;
+    }
+    .viewFileImg
+    {
+        width: 17%;
+    }
+    .viewFileName
+    {
+        width: 73%;
+    }
+}

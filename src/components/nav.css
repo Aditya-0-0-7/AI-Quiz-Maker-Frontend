@@ -1,0 +1,56 @@
+header
+{
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    color: white;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    left:0;
+}
+#headLogo
+{
+    height:10vh;
+    width: 10vh;
+}
+#headNavContainer
+{
+    width:fit-content;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#headLogoContainer
+{
+    height:10vh;
+    width: 10vh;
+    position: fixed;
+    top:0;
+    left: 0;
+}
+.headerNav
+{
+    font-size: 2.5vmin;
+    padding:1.5vmin;
+    cursor: pointer;
+    border:none;
+    background-color: rgba(255,255,255,0);
+    color:white;
+}
+.headerNavExtra
+{
+    color:rgba(1, 117, 228,1);
+    font-weight: 500;
+}
+@media (max-width: 480px) {
+    .headerNav
+    {
+        font-size: 3.5vmin;
+    }
+}

@@ -1,0 +1,29 @@
+#home
+{
+    width: 100%;
+    min-height: 90vh;
+    height: fit-content;
+    position: absolute;
+    top:10vh;
+    margin:0;
+    background-color: #C4B29E;
+}
+#pages
+{
+    width:100vw;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+  
+.container.show {
+    opacity: 1;
+    transform: translateY(0);
+}

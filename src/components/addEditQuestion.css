@@ -1,0 +1,283 @@
+.addEditQuestionScreen
+{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.3);
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.addEditQuestionContainer
+{
+    width: 60%;
+    height: 70%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2vmin;
+}
+.addEditQuestionHeader
+{
+    width: 100%;
+    height: 10%;
+    box-sizing: border-box;
+    padding: 2%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 3vmin;
+    padding-right: 2%;
+}
+.addEditQuestionData
+{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding-bottom: 3%;
+}
+.enterQuestionContainer
+{
+    width: 95%;
+    padding-top: 15%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.enterQuestionSubContainer
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.addQuestionText
+{
+    margin-bottom: 2%;
+    height: 18%;
+    width: 100%;
+    font-weight: 600;
+    font-size: 2.5vmin;
+}
+.addQuestionInput
+{
+    width:100%;
+    height: 80%;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 1vmin;
+    font-size: 2vmin;
+    border-color: rgba(0,0,0,0.3);
+    font-weight: 500;
+}
+.addOptionsContainer
+{
+    margin-top:4%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+    height: 5vh;
+}
+.addEditQuestionInputs
+{
+    width: 78%;
+    height: 100%;
+    border-radius: 1vmin;
+    box-sizing: border-box;
+    border-color: rgba(0,0,0,0.3);
+    outline: none;
+    border-width: 1px;
+    padding:1.5%;
+    outline: none;
+    font-size: 2vmin;
+}
+.addEditQuestionBtn
+{
+    width: 19%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+    padding:1.5%;
+    border-radius: 1vmin;
+    background-color: rgba(1, 117, 228,0.7);
+    color: white;
+    font-weight: 570;
+}
+.displayOptions
+{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 95%;
+    position: relative;
+}
+.displayOption
+{
+    width: 30%;
+    height: 5vh;
+    background-color: rgba(0, 0, 0,0.1);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5%;
+    border-radius: 1vmin;
+    color: black;
+}
+.removeOptionBtn
+{
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+    font-size: 2vmin;
+    border-top-left-radius: 1vmin;
+    border-bottom-left-radius: 1vmin;
+    background-color: rgba(0, 0, 0,0.1);
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: 500;
+}
+.removeOptionBtn:hover
+{
+    color: red;
+}
+.displayOption-option
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+    font-size: 2vmin;
+    height: 100%;
+    border-top-right-radius: 1vmin;
+    border-bottom-right-radius: 1vmin;
+    background-color: rgba(0, 0, 0,0.1);
+    line-height: 5vh;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding-right: 3%;
+    padding-left: 2%;
+    text-align: center;
+    font-weight: 400;
+}
+.correctAnswerContainer
+{
+    width: 95%;
+    height: 5vh;
+    margin-bottom: 3%;
+    margin-top: 1%;
+}
+.AddQuestionBtnsContainer
+{
+    width: 95%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.cancelQuestionBtn
+{
+    background-color: rgb(238, 78, 78);
+    width: 20%;
+}
+.addQuestionBtn
+{
+    background-color: rgb(65, 176, 110);
+    width: 20%;
+}
+.crossHovers:hover
+{
+    color: red;
+}
+@media (max-width: 1500px) {
+    .addEditQuestionContainer
+    {
+        width: 80%;
+    }
+}
+@media (max-width: 1000px) {
+    .addEditQuestionContainer
+    {
+        width: 90%;
+        height: 60%;
+    }
+    .displayOption
+    {
+        height: 4vh;
+    }
+    .displayOption-option
+    {
+        line-height: 4vh;
+    }
+}
+@media (max-width:700px)
+{
+    .cancelQuestionBtn
+    {
+        margin-right: 3%;
+        width: 30%;
+    }
+    .addQuestionBtn
+    {
+        width: 30%;
+    }
+}
+@media (max-width:600px){
+    .addEditQuestionInputs
+    {
+        width: 68%;
+        font-size: 3vmin;
+    }
+    .addEditQuestionBtn
+    {
+        width: 27%;
+        font-weight: 500;
+    }
+    .enterQuestionContainer
+    {
+        padding-top: 25%;
+    }
+    .displayOption-option
+    {
+        font-size: 3vmin;
+        width: 85%;
+    }
+    .addQuestionInput
+    {
+        font-size: 3.5vmin;
+    }
+    .removeOptionBtn
+    {
+        font-size: 3vmin;
+        width: 15%;
+    }
+    .correctAnswerContainer
+    {
+        height: 7vh;
+        margin-bottom: 0.5%;
+    }
+    .addQuestionText
+    {
+        font-size: 3.5vmin;
+    }
+    .addEditQuestionHeader
+    {
+        font-size: 4vmin;
+    }
+}

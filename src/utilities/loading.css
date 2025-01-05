@@ -1,0 +1,26 @@
+.loadingScreen
+{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    background-color: rgb(196,178,158,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+.loadingImg
+{
+    width: 70vmin;
+    height: 70vmin;
+}
+@media (max-width: 750px) {
+    .loadingImg
+    {
+        width: 80vmin;
+        height: 80vmin;
+    }
+}

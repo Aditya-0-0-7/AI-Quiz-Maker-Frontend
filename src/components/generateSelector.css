@@ -1,0 +1,49 @@
+#selectorHolder
+{
+    width:100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#selectorContainer
+{
+    width:80%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 2.5vh;
+    padding: 1vmin;
+    font-size: 2.5vmin;
+    border: 2px solid rgb(200, 206, 237);
+}
+.selectorOption
+{
+    width:33.33%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2.5vh;
+    cursor: pointer;
+    color: #2573b4;
+    font-weight: 500;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+.selectorOptionUnselected:hover
+{
+    background-color: rgba(1, 117, 228,0.1);
+}
+.selectorOptionSelected
+{
+    background-color: #0175e4;
+    color: white;
+}
+@media (max-width: 480px) {
+    #selectorContainer
+    {
+        font-size: 3.5vmin;
+    }
+}

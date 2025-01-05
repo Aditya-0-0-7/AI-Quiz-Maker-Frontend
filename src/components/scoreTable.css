@@ -1,0 +1,186 @@
+.scoreTableScreen
+{
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    top:10vh;
+    margin:0;
+    background-color: #C4B29E;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.scoreHeading
+{
+    font-size: 3vmax;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+.scoreTable
+{
+    width: 90%;
+    height: 70%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 3vmin;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.scoreContent
+{
+    width: 100%;
+    height: 88%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.scoreRow
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+.scoreIndex
+{
+    width: 24%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 2.3vmin;
+}
+.scoreAvatar
+{
+    width: 24%;
+    height: 4.5vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scoreAvatarImg
+{
+    width: 100%;
+    height: 100%;
+}
+.scorePlayerName
+{
+    width: 24%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    box-sizing: border-box;
+    font-size: 2.3vmin;
+}
+.displayScore
+{
+    width: 24%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 2.3vmin;
+}
+.headerCommon
+{
+    font-weight: 700;
+    font-size: 3vmin;
+}
+.scoreBtns
+{
+    width: 90%;
+    height: 15%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.btnExtra
+{
+    padding: 1%;
+}
+@media (max-width: 1400px)
+{
+    .btnExtra
+    {
+        padding: 2.5%;
+    }
+}
+@media (max-width: 900px)
+{
+    .btnExtra
+    {
+        width: 40%;
+        font-size: 3vmin;
+    }
+    .headerCommon
+    {
+        font-size: 4vmin; 
+    }
+    .scoreIndex
+    {
+        font-size: 3.3vmin;
+    }
+    .scorePlayerName
+    {
+        font-size: 3.3vmin;
+    }
+    .displayScore
+    {
+        font-size: 3.3vmin;
+    }
+    .scoreAvatar
+    {
+        height: 5.5vw;
+    }
+    .scoreRow
+    {
+        margin-top: 1%;
+    }
+}
+@media (max-width: 500px)
+{
+    .btnExtra
+    {
+        font-size: 3.5vmin;
+        padding: 3%;
+    }
+    .headerCommon
+    {
+        font-size: 4.5vmin; 
+    }
+    .scoreIndex
+    {
+        font-size: 3.8vmin;
+    }
+    .scorePlayerName
+    {
+        font-size: 3.8vmin;
+    }
+    .displayScore
+    {
+        font-size: 3.8vmin;
+    }
+    .scoreAvatar
+    {
+        height: 6vw;
+    }
+}

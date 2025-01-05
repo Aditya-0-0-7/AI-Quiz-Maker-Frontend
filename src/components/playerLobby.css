@@ -1,0 +1,160 @@
+.playerLobbyScreen
+{
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    top:10vh;
+    margin:0;
+    background-color: #C4B29E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+.playerContainer
+{
+    width: 90%;
+    height: 67.5vh;
+    margin-top: 6vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 2vmin;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.lobbyMsg
+{
+    height: 4.5vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 2.5vmin;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+.lobbyBtns
+{
+    width: 90%;
+    height: 6.3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+.leaveQuizBtn
+{
+    background-color: rgb(238, 78, 78);
+    font-size: 2vmin;
+    padding: 1%;
+    margin-top: 0.25%;
+    margin-bottom: 0.25%;
+}
+.startQuizBtn
+{
+    background-color: rgb(65, 176, 110);
+    padding: 1%;
+    font-size: 2vmin;
+    margin-top: 0.25%;
+    margin-bottom: 0.25%;
+}
+.startQuizBtn2
+{
+    padding: 2%;
+}
+.startControlScreen
+{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.startControlPanel
+{
+    width: 40%;
+    height: fit-content;
+    background-color: white;
+    padding:2vmin;
+    border-radius: 2vmin;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.25) inset;
+}
+.startControlInput
+{
+    width: 90%;
+    height: 5vh;
+    margin-bottom: 1%;
+    margin-top: 2%;
+    text-align: center;
+    border-radius: 1vmin;
+    border-width: 0.1vmin;
+    border-color: rgba(0,0,0);
+    font-weight: 500;
+    outline: none;
+}
+.startControlExpand
+{
+    width: 90%;
+    height: 5vh;
+    border-radius: 1vmin;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    padding: 1%;
+    outline: none;
+    border-width: 0.1vmin;
+    border-color: rgba(0,0,0);
+    text-align: center;
+}
+.startControlExpand option
+{
+    text-align: center;
+    color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.15);
+}
+@media (max-width: 600px)
+{
+    .lobbyBtns
+    {
+        height: 7%;
+    }
+    .leaveQuizBtn
+    {
+        font-size: large;
+        width: 30%;
+    }
+    .startQuizBtn
+    {
+        
+        font-size: large;
+        width: 30%;
+    }
+    .lobbyMsg
+    {
+        font-size: large;
+    }
+    .startControlPanel
+    {
+        width: 70%;
+    }
+    .startQuizBtn2
+    {
+        font-size: small;
+        margin-bottom: 2%;
+        margin-top: 2%;
+    }
+    .startControlInput
+    {
+        margin-bottom: 2%;
+    }
+}

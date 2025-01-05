@@ -1,0 +1,142 @@
+.viewQuestion
+{
+    width: 98%;
+    border-radius: 2vmin;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.1);
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+.viewQuestion:hover
+{
+    background-color: rgba(0,0,0,0.2);
+}
+.viewQuestion-total
+{
+    width: 98%;
+    height: fit-content;
+    border-radius: 2vmin;
+}
+.viewQuestion-question
+{
+    width: 100%;
+    height: fit-content;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.viewQuestion-questionText
+{
+    height: fit-content;
+    width: 94%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    cursor: pointer;
+}
+.viewQuestion-editQuestionBtn
+{
+    width: 2.5%;
+    padding-top: 2.5%;
+    position: relative;
+    height: fit-content;
+    cursor: pointer;
+}
+.viewQuestion-editQuestionBtnImg
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.viewQuestion-removeQuestionBtn
+{
+    width: 3%;
+    height: fit-content;
+    background-color: rgba(255,255,255,0);
+    border: none;
+    cursor: pointer;
+    font-size: 2.5vmin;
+}
+.viewQuestion-removeQuestionBtn:hover
+{
+    color: red;
+    background-color: rgba(255,255,255,0);;
+}
+.expandedContentContainer
+{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 1vh;
+    padding-top:1vh;
+    padding-bottom:1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    box-sizing: border-box;
+    border-radius: 2vmin;
+}
+.expandedContentHeading
+{
+    font-size: 2.5vmin;
+    height: fit-content;
+    width: fit-content;
+    font-weight: 600;
+}
+.expandedContentNonHeading
+{
+    font-size: 2vmin;
+    height: fit-content;
+    width: fit-content;
+}
+@media (max-width: 1200px)
+{
+    .viewQuestion-questionText
+    {
+        width: 90%;
+        padding-left: 3%;
+    }
+    .viewQuestion-editQuestionBtn
+    {
+        width: 5%;
+        padding-top: 5%;
+    }
+    .viewQuestion-removeQuestionBtn
+    {
+        width: 5%;
+        font-size: 3vmin;
+    }
+}
+@media (max-width: 550px)
+{
+    .viewQuestion-questionText
+    {
+        width: 80%;
+        padding-left: 3%;
+    }
+    .viewQuestion-editQuestionBtn
+    {
+        width: 10%;
+        padding-top: 10%;
+    }
+    .viewQuestion-removeQuestionBtn
+    {
+        width: 10%;
+        font-size: 4vmin;
+    }
+    .expandedContentHeading
+    {
+        font-size: 4vmin;
+    }
+    .expandedContentNonHeading
+    {
+        font-size: 3.5vmin;
+    }
+}

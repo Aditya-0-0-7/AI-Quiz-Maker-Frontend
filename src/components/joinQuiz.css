@@ -1,0 +1,167 @@
+#joinQuiz
+{
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top:10vh;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#joinQuizContainer
+{
+    width: 95%;
+    max-height: 90%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+#joinQuizContainerWrapper
+{
+    width: 40%;
+    height: 90%;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 2vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+#viewAvatar
+{
+    width:20%;
+    padding-top: 20%;
+    margin-top: 3vh;
+    position:relative;
+}
+#avatarMessage
+{
+    font-size: 2.5vmin;
+    margin-top: 3%;
+    font-weight: 500;
+}
+#selectAvatar
+{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4%;
+}
+.selectAvatarImg
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.selectAvatarImgHolder
+{
+    width: 12%;
+    padding-top: 12%;
+    position: relative;
+}
+.selectAvatarBtn
+{
+    outline: none;
+    background-color: rgba(255,255,255,0);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 3vmin;
+}
+.selectedAvatarImg
+{
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.joinInput
+{
+    width:80%;
+    height:6vh;
+    margin-top: 3%;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 1vmin;
+    border: 1px solid rgb(200, 206, 237);
+    padding: 3%;
+    font-size: 2.5vmin;
+}
+.joinQuizMode
+{
+    width: 80%;
+    height: fit-content;
+    border-radius: 1vmin;
+    margin-top: 3%;
+    padding: 2%;
+    outline: none;
+    border-color: rgba(0,0,0,0.3);
+    text-align: center;
+}
+.joinQuizBtn
+{
+    margin-top: 5%;
+}
+@media (max-width: 1200px) {
+    #joinQuizContainerWrapper
+    {
+        width: 60%;
+    }
+    #avatarMessage
+    {
+        font-size: 3.5vmin;
+        margin-top: 5%;
+    }
+    .extra
+    {
+        font-size:2.2vmin;
+    }
+}
+@media (max-width: 750px) {
+    #joinQuizContainerWrapper
+    {
+        width: 70%;
+    }
+    #avatarMessage
+    {
+        font-size: 3.5vmin;
+        margin-top: 5%;
+    }
+    .extra
+    {
+        font-size:3vmin;
+    }
+    .joinInput
+    {
+        font-size: 3.2vmin;
+    }
+}
+@media (max-width: 500px) {
+    #joinQuizContainerWrapper
+    {
+        width: 80%;
+    }
+    .extra
+    {
+        font-size:4vmin;
+    }
+}
