@@ -121,7 +121,7 @@ function ViewQuizExplorer({fetchedQuiz,exploreQuizCancelHandler,setLoading,trigg
 
     return(
         <section id='viewQuizScreen'>
-            {showPanel&&<InfoPanel setShowPanel={setShowPanel} data={generateResult} note={"Note: Do not share the Secret Code with anyone. Only the Share Code should be provided to participants. The Secret Code grants admin privileges for the quiz and must be kept confidential."}/>}
+            {showPanel&&<InfoPanel setShowPanel={setShowPanel} data={generateResult} note={"Note: Do not share the Secret Code with anyone. Only the Share Code should be provided to participants. The Secret Code grants admin privileges for the quiz and must be kept confidential."} triggerToast={triggerToast}/>}
             <div className='viewQuizContainers'>
                 <div className='viewQuizHeading'>Confirmed Questions</div>
                 <section className='quizQuestions'>

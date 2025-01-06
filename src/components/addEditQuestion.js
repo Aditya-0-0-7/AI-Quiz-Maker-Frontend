@@ -13,6 +13,19 @@ function AddEditQuestion({setOpenAddQuestion, setOpenEditQuestion, question, set
     const [questionValue, setQuestionValue] = useState("");
     const [selectedCorrectOptions, setSelectedCorrectOptions] = useState([]);
     const [selectedDifficulty, setSelectedDifficulty] = useState("");
+    const [maxHeight, setMaxHeight] = useState("10vh");
+
+    // Function to update maxHeight based on screen width
+    const updateMaxHeight = () => {
+        if (window.innerWidth <= 600)
+        {
+            setMaxHeight("12vh");
+        } 
+        else
+        {
+            setMaxHeight("10vh");
+        }
+    };
     
     function addOptions()
     {
@@ -98,6 +111,9 @@ function AddEditQuestion({setOpenAddQuestion, setOpenEditQuestion, question, set
             const formattedDifficultyValue = question["difficulty"].charAt(0).toUpperCase() + question["difficulty"].slice(1).toLowerCase();
             setSelectedDifficulty({value:formattedDifficultyValue,label:formattedDifficultyValue})  
         }
+        updateMaxHeight();
+        window.addEventListener("resize", updateMaxHeight);
+        return () => window.removeEventListener("resize", updateMaxHeight);
     },[]);
 
     return(<section className="addEditQuestionScreen">
@@ -124,7 +140,7 @@ function AddEditQuestion({setOpenAddQuestion, setOpenEditQuestion, question, set
                     })}
                 </div>
                 
-                <div className='correctAnswerContainer'>
+                <div className='correctAnswerDrop'>
                     <Select
                         closeMenuOnSelect={false}
                         components={animatedComponents}
@@ -132,13 +148,21 @@ function AddEditQuestion({setOpenAddQuestion, setOpenEditQuestion, question, set
                         isMulti
                         options={selectOptions}
                         placeholder="Select Correct Answers"
-                        styles={{option: (base, state) => ({
-                            ...base,
-                            whiteSpace:"nowrap",
-                            overflow:'hidden',
-                            textOverflow:'ellipsis'
-                          })
-                        }}
+                        styles={
+                            {
+                                option: (base, state) => ({
+                                    ...base,
+                                    whiteSpace:"nowrap",
+                                    overflow:'hidden',
+                                    textOverflow:'ellipsis'
+                                }),
+                                valueContainer: (base) => ({
+                                    ...base,
+                                    maxHeight: maxHeight,
+                                    overflowY: "auto",
+                                }),
+                            }
+                        }
                         onChange={(valueList)=>{setSelectedCorrectOptions(valueList)}}
                     />
                 </div>

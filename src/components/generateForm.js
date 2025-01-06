@@ -110,7 +110,7 @@ function GenerateForm({generationMethod, setLoading, triggerToast})
             </div>
             <div id='formHolder'>
                 <form id='formContent' onSubmit={(event)=>{event.preventDefault()}}>
-                    {showPanel&&<InfoPanel setShowPanel={setShowPanel} data={generateResult} note={"Note: Do not share the Secret Code with anyone. Only the Share Code should be provided to participants. The Secret Code grants admin privileges for the quiz and must be kept confidential."}/>}
+                    {showPanel&&<InfoPanel setShowPanel={setShowPanel} data={generateResult} note={"Note: Do not share the Secret Code with anyone. Only the Share Code should be provided to participants. The Secret Code grants admin privileges for the quiz and must be kept confidential."} triggerToast={triggerToast}/>}
                     {generationMethod===1&&<div id='uploadContainer'>
                         <button id='imageUploadBtn' className='uploadBtn uploadBtnActive press-button' onClick={uploadClick}><img src={uploadImage} className='uploadImg'/><div className='uploadText'>Upload Image</div></button>
                         <button id='viewImageBtn' style={{marginTop:'5%'}} className='uploadBtn uploadBtnActive press-button' onClick={viewImageHandler}><img src={viewImage} className='uploadImg'/><div className='uploadText'>View Images</div></button>

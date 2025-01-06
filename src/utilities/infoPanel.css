@@ -53,11 +53,31 @@
 {
     width: 100%;
     height: fit-content;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    display: flex;
+    align-items: center;
     font-size: 3vmin;
     text-align: center;
     font-weight: 600;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+}
+.panelItemData
+{
+    width: 90%;
+    height: fit-content;
+}
+.panelCopyBtn
+{
+    width: 9%;
+    margin-left: 1%;
+    max-width: 40px;
+    aspect-ratio: 1/1;
+}
+.panelCopyBtnImg
+{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
 .note
 {
