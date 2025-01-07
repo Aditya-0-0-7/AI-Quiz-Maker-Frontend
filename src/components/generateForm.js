@@ -21,7 +21,7 @@ function GenerateForm({generationMethod, setLoading, triggerToast})
     const [language, setLanguage] = useState("")
     const [showPanel, setShowPanel] = useState(false)
     const [generateResult, setGenerateResult] = useState({})
-    const [imageLang, setImageLang] = useState("");
+    const [imageLang, setImageLang] = useState("English");
 
     function uploadClick(event)
     {
