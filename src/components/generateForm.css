@@ -309,6 +309,9 @@
     }
     .generateInput
     {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         height:fit-content;
         padding-left: 3%;
         padding-top: 2%;

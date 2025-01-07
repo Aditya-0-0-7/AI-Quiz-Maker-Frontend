@@ -21,6 +21,7 @@ function GenerateForm({generationMethod, setLoading, triggerToast})
     const [language, setLanguage] = useState("")
     const [showPanel, setShowPanel] = useState(false)
     const [generateResult, setGenerateResult] = useState({})
+    const [imageLang, setImageLang] = useState("");
 
     function uploadClick(event)
     {
@@ -69,6 +70,18 @@ function GenerateForm({generationMethod, setLoading, triggerToast})
             else if(generationMethod === 1)
             {
                 data.append('generation_method', "image");
+                if(imageLang === "English")
+                {
+                    data.append('language_img', "eng")
+                }
+                else if(imageLang === "Hindi")
+                {
+                    data.append('language_img', "hin")
+                }
+                else if(imageLang === "Both Hindi and English")
+                {
+                    data.append('language_img', "hin+eng")
+                }
                 selectedImage.forEach(image => data.append('images', image));
             }
             else if(generationMethod === 2)
@@ -144,6 +157,13 @@ function GenerateForm({generationMethod, setLoading, triggerToast})
                         {generationMethod===0&&<input id='topic' className='generateInput' type='text' value={topic} onChange={(e)=>{setTopic(e.target.value)}}/>}
                         {generationMethod===2&&<label className='generateLabel' for='text'>Text</label>}
                         {generationMethod===2&&<textarea id='text' className='generateInput fromText' type='text' value={text} onChange={(e) => setText(e.target.value)}/>}
+                        {generationMethod===1&&<label className='generateLabel' for='text'>Image Text Language</label>}
+                        {generationMethod===1&&
+                        <select id='imageLang' className='generateInput' value={imageLang} onChange={(e)=> setImageLang(e.target.value)}>
+                            <option>English</option>
+                            <option>Hindi</option>
+                            <option>Both Hindi and English</option>
+                        </select>}   
                         <label className='generateLabel' for='numQues'>Number Of Questions</label>
                         <input id='numQues' className='generateInput' type='number' min='10' max='30' value={numQues} onChange={(e) => setNumQues(parseInt(e.target.value))}/>
                         <label className='generateLabel' for='difficulty'>Difficulty of Questions</label>
