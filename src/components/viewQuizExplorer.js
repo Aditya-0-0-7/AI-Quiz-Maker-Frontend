@@ -163,8 +163,8 @@ function ViewQuizExplorer({fetchedQuiz,exploreQuizCancelHandler,setLoading,trigg
                     <button className='commonBtn saveViewBtn press-button-general' onClick={saveQuizHandler}>{secretCode===""?"Generate Quiz":"Save Quiz"}</button>
                 </div>
             </div>
-            {openAddQuestion&&<AddEditQuestion setOpenAddQuestion={setOpenAddQuestion} setOpenEditQuestion={setOpenEditQuestion} question={""} setQuestions={setQuestions} editQuestionIndex={editQuestionIndex} />}
-            {openEditQuestion&&<AddEditQuestion setOpenAddQuestion={setOpenAddQuestion} setOpenEditQuestion={setOpenEditQuestion} question={editQuestionValue} setQuestions={setQuestions} editQuestionIndex={editQuestionIndex} />}
+            {openAddQuestion&&<AddEditQuestion setOpenAddQuestion={setOpenAddQuestion} setOpenEditQuestion={setOpenEditQuestion} question={""} setQuestions={setQuestions} editQuestionIndex={editQuestionIndex} triggerToast={triggerToast} />}
+            {openEditQuestion&&<AddEditQuestion setOpenAddQuestion={setOpenAddQuestion} setOpenEditQuestion={setOpenEditQuestion} question={editQuestionValue} setQuestions={setQuestions} editQuestionIndex={editQuestionIndex} triggerToast={triggerToast} />}
         </section>
     );
 }

@@ -5,7 +5,7 @@ import './addEditQuestion.css';
 
 const animatedComponents = makeAnimated();
 
-function AddEditQuestion({setOpenAddQuestion, setOpenEditQuestion, question, setQuestions, editQuestionIndex})
+function AddEditQuestion({setOpenAddQuestion, setOpenEditQuestion, question, setQuestions, editQuestionIndex, triggerToast})
 {
     const [addedOptions, setAddedOptions] = useState([]);
     const [optionValue, setOptionValue] = useState('');
@@ -87,9 +87,31 @@ function AddEditQuestion({setOpenAddQuestion, setOpenEditQuestion, question, set
         }
     }
 
+    function validateQuestion(formattedQuestion)
+    {
+        if(formattedQuestion["question"]==="")
+        {
+            triggerToast("Question can not be empty");
+            return(false);
+        }
+        if(formattedQuestion["options"].length<2)
+        {
+            triggerToast("Question should have atleast two options");
+            return(false);
+        }
+        if(formattedQuestion["correct_option"].length===0)
+        {
+            triggerToast("Question should have atleast one correct option");
+            return(false);
+        }
+        return(true);
+    }
+
     function addQuestionHandler()
     {
         let formattedQuestion = getFormattedQuestion();
+        if(!validateQuestion(formattedQuestion))
+            return;
         setQuestions(value=>[...value, formattedQuestion]);
         setOpenAddQuestion(value=>!value);
     }
@@ -97,6 +119,8 @@ function AddEditQuestion({setOpenAddQuestion, setOpenEditQuestion, question, set
     function editQuestionHandler()
     {
         let formattedQuestion = getFormattedQuestion();
+        if(!validateQuestion(formattedQuestion))
+            return;
         setQuestions(value=>[...value.slice(0,editQuestionIndex),formattedQuestion,...value.slice(editQuestionIndex+1)]);
         setOpenEditQuestion(false);
     }

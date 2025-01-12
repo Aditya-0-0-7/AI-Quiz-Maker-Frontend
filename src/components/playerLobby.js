@@ -152,6 +152,16 @@ function PlayerLobby({images, setToPlayerLobby, playerDetails, setLoading, trigg
 
     function startQuizHandler()
     {
+        if(secretCode === "")
+        {
+            triggerToast("Secret Code field can not be empty");
+            return;
+        }
+        if(quizMode === "")
+        {
+            triggerToast("Please select the quiz mode");
+            return;
+        }
         setLoading(true);
         if (websocketRef.current && isConnected) {
             websocketRef.current.send(
