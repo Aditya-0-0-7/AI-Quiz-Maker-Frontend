@@ -122,7 +122,7 @@ function ViewQuiz({setLoading,triggerToast})
                             type="file"
                             ref={fileInputRefs}
                             style={{ display: 'none' }}
-                            accept=".doc,.docx"
+                            accept=".pdf"
                             onChange={handleFileChange}
                     />
                 </div>
