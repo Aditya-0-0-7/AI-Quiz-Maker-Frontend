@@ -109,7 +109,7 @@
 .joinQuizMode
 {
     width: 80%;
-    height: fit-content;
+    height: 6vh;
     border-radius: 1vmin;
     margin-top: 3%;
     padding: 2%;
